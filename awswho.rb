@@ -9,16 +9,16 @@ class Awswho < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jftuga/aw/releases/download/v1.0.0/aw_1.0.0_darwin_amd64.zip"
-      sha256 "bcb98431b9c8ad80040809cd3729d2f2a805d3b11bb74095d83cc46c2321ccca"
+      url "https://github.com/jftuga/aw/releases/download/v1.0.0/aw_1.0.0_darwin_amd64.tar.gz"
+      sha256 "63c5a89c875ebb0d74cb354bfbba045df3b55199a454f308634b279ba4437196"
 
       def install
         bin.install "awswho"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jftuga/aw/releases/download/v1.0.0/aw_1.0.0_darwin_arm64.zip"
-      sha256 "b8bf732dc47af8304f9461c853754759dcfc10c5c43ad7a9be05f3ce44e27fdd"
+      url "https://github.com/jftuga/aw/releases/download/v1.0.0/aw_1.0.0_darwin_arm64.tar.gz"
+      sha256 "42d4d56a03ca05cc4fff83bebd4f38c3cc34984e05545c1013145d23b2e2c1fb"
 
       def install
         bin.install "awswho"
@@ -27,25 +27,17 @@ class Awswho < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/jftuga/aw/releases/download/v1.0.0/aw_1.0.0_linux_arm.zip"
-      sha256 "f1f9c5586f93af09d1293aae5f949ae190fd19ff2645ffe18f3fcf1e17c8ac08"
-
-      def install
-        bin.install "awswho"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jftuga/aw/releases/download/v1.0.0/aw_1.0.0_linux_arm64.zip"
-      sha256 "ca181a1bb657d7ee9cd4b67c1052e3a8ab73636777ebaa86a8e57a49d875aacd"
+      url "https://github.com/jftuga/aw/releases/download/v1.0.0/aw_1.0.0_linux_arm64.tar.gz"
+      sha256 "ebba3038f94f2174adf32f8cc2f555ee2f36feb3f494404c34c984922b449359"
 
       def install
         bin.install "awswho"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jftuga/aw/releases/download/v1.0.0/aw_1.0.0_linux_amd64.zip"
-      sha256 "b325cb879fd783e543dcd6124dafaab2ff91d1e70df4cf7ff95797e25c52b758"
+      url "https://github.com/jftuga/aw/releases/download/v1.0.0/aw_1.0.0_linux_amd64.tar.gz"
+      sha256 "13f11b52633f608aaf63966b297e8e1970fd6426364d77f2b12adb5d66e947e5"
 
       def install
         bin.install "awswho"
