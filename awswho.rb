@@ -8,17 +8,17 @@ class Awswho < Formula
   version "1.0.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/jftuga/aw/releases/download/v1.0.0/aw_1.0.0_darwin_amd64.tar.gz"
-      sha256 "63c5a89c875ebb0d74cb354bfbba045df3b55199a454f308634b279ba4437196"
+    if Hardware::CPU.arm?
+      url "https://github.com/jftuga/aw/releases/download/v1.0.0/aw_1.0.0_darwin_arm64.tar.xz"
+      sha256 "cd5c0701ae3472986077df1583b633ff3e5b30324c259eb6006e95a8f08af7dc"
 
       def install
         bin.install "awswho"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/jftuga/aw/releases/download/v1.0.0/aw_1.0.0_darwin_arm64.tar.gz"
-      sha256 "42d4d56a03ca05cc4fff83bebd4f38c3cc34984e05545c1013145d23b2e2c1fb"
+    if Hardware::CPU.intel?
+      url "https://github.com/jftuga/aw/releases/download/v1.0.0/aw_1.0.0_darwin_amd64.tar.xz"
+      sha256 "3e8798b667b4e4c54532db7006d8ec269a94fd218386a5cd522b6eb7b417ec57"
 
       def install
         bin.install "awswho"
@@ -27,17 +27,17 @@ class Awswho < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jftuga/aw/releases/download/v1.0.0/aw_1.0.0_linux_arm64.tar.gz"
-      sha256 "ebba3038f94f2174adf32f8cc2f555ee2f36feb3f494404c34c984922b449359"
+    if Hardware::CPU.intel?
+      url "https://github.com/jftuga/aw/releases/download/v1.0.0/aw_1.0.0_linux_amd64.tar.xz"
+      sha256 "d0b03adbbfdb4561cf7a29357491c680411f43b4e49fad060a0297597c7c9e68"
 
       def install
         bin.install "awswho"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/jftuga/aw/releases/download/v1.0.0/aw_1.0.0_linux_amd64.tar.gz"
-      sha256 "13f11b52633f608aaf63966b297e8e1970fd6426364d77f2b12adb5d66e947e5"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jftuga/aw/releases/download/v1.0.0/aw_1.0.0_linux_arm64.tar.xz"
+      sha256 "7d79e2f734e64a7170f5e6435edf1f517843ee41b4fd416c3021b6cdda84385a"
 
       def install
         bin.install "awswho"
