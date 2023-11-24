@@ -8,17 +8,17 @@ class Awswho < Formula
   version "1.0.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/jftuga/awswho/releases/download/v1.0.0/awswho_1.0.0_darwin_arm64.tar.xz"
-      sha256 "38237cc2625cc5aa5a4fe02584e57c0cbf527b07eb507a1057455fd9fa777026"
+    if Hardware::CPU.intel?
+      url "https://github.com/jftuga/awswho/releases/download/v1.0.0/awswho_1.0.0_darwin_amd64.tar.xz"
+      sha256 "6708b2b943ad07b923f117fc46f70905be30c7f2b682ee892357d4ea26aa79de"
 
       def install
         bin.install "awswho"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/jftuga/awswho/releases/download/v1.0.0/awswho_1.0.0_darwin_amd64.tar.xz"
-      sha256 "d8b7dc41d5da91649153b96deec8d86c2cac9643935ea44f8379c128f8c880ac"
+    if Hardware::CPU.arm?
+      url "https://github.com/jftuga/awswho/releases/download/v1.0.0/awswho_1.0.0_darwin_arm64.tar.xz"
+      sha256 "d44937790359eced3d77c8e6aaf30e42b3991f409b3c087c93dc4bf8196745cc"
 
       def install
         bin.install "awswho"
@@ -29,7 +29,7 @@ class Awswho < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/jftuga/awswho/releases/download/v1.0.0/awswho_1.0.0_linux_arm64.tar.xz"
-      sha256 "751e3c17cbe60aa09251f1f3959639aec48ed8a831fae6aa26253d48b3668852"
+      sha256 "60d56ae2bd466d00026c45348c5ce4d1a8184b27f85cfbc5bb0ca350d90f2d47"
 
       def install
         bin.install "awswho"
@@ -37,7 +37,7 @@ class Awswho < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/jftuga/awswho/releases/download/v1.0.0/awswho_1.0.0_linux_amd64.tar.xz"
-      sha256 "86301fa226ee392300a6a1aa040c0d8da7606833d6e05fc03aa05671117e0e25"
+      sha256 "a6669aed9bb2615f97276ca6515b0a833e0cc55c096dd17825c18dda8587461f"
 
       def install
         bin.install "awswho"
