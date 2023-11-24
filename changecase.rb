@@ -10,18 +10,24 @@ class Changecase < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/jftuga/changecase/releases/download/v1.2.0/changecase_1.2.0_darwin_arm64.tar.xz"
-      sha256 "ed0005433eeb2b3188bef14229b4dc7a23c986243054bb6e5f3f68569332131d"
+      sha256 "11e3fabef839cd67c49477e7c023ade06d5f6bb4c957c15198600857fb023e4e"
 
       def install
-        bin.install "lower" "upper" "titlecase" "len"
+        bin.install "lower"
+        bin.install "upper"
+        bin.install "titlecase"
+        bin.install "len"
       end
     end
     if Hardware::CPU.intel?
       url "https://github.com/jftuga/changecase/releases/download/v1.2.0/changecase_1.2.0_darwin_amd64.tar.xz"
-      sha256 "30062d2ec5523076ff6e6019e4da3e1820e57528ef89366d53da6315627b6871"
+      sha256 "02d3c4f7e67d333bd8316aa0ae2c2fb5a7124a8d7d98e5909fcd60b15e4388f4"
 
       def install
-        bin.install "lower" "upper" "titlecase" "len"
+        bin.install "lower"
+        bin.install "upper"
+        bin.install "titlecase"
+        bin.install "len"
       end
     end
   end
@@ -29,18 +35,24 @@ class Changecase < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/jftuga/changecase/releases/download/v1.2.0/changecase_1.2.0_linux_amd64.tar.xz"
-      sha256 "cda1f7ab0dcfa98ef38e8662f04954fb593931518caf5fba37d16270d4eea348"
+      sha256 "24dd66d29f429832a523dd8d76504643640ef66d209db042c31f8c2b17b1749c"
 
       def install
-        bin.install "lower" "upper" "titlecase" "len"
+        bin.install "lower"
+        bin.install "upper"
+        bin.install "titlecase"
+        bin.install "len"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/jftuga/changecase/releases/download/v1.2.0/changecase_1.2.0_linux_arm64.tar.xz"
-      sha256 "f32f9409f9eee3a7a084f7bd7c3c52a8d587e1a6711a9cd2fdab9c963319449e"
+      sha256 "36ead8f7380712be4d5e54c9f783aa2fc7df10f35dd4ce089e96092d01f6aa9f"
 
       def install
-        bin.install "lower" "upper" "titlecase" "len"
+        bin.install "lower"
+        bin.install "upper"
+        bin.install "titlecase"
+        bin.install "len"
       end
     end
   end
