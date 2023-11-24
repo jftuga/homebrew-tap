@@ -8,17 +8,17 @@ class Freq < Formula
   version "1.8.2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/jftuga/freq/releases/download/v1.8.2/freq_1.8.2_darwin_arm64.tar.xz"
-      sha256 "0c6eeff8ea7a8e958f73b9fbb7c83bab4e72b10c798006469ed1640c0605c50b"
+    if Hardware::CPU.intel?
+      url "https://github.com/jftuga/freq/releases/download/v1.8.2/freq_1.8.2_darwin_amd64.tar.xz"
+      sha256 "0d16a6b5fda3a1414a0d122c2cdc8ddf586cdb8888ad413843a8f287df4a65be"
 
       def install
         bin.install "freq"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/jftuga/freq/releases/download/v1.8.2/freq_1.8.2_darwin_amd64.tar.xz"
-      sha256 "e3e9d0f149717fb66e3412a05a4e7c30e019e750b3048d0ab47ae5ffc3dc9f4b"
+    if Hardware::CPU.arm?
+      url "https://github.com/jftuga/freq/releases/download/v1.8.2/freq_1.8.2_darwin_arm64.tar.xz"
+      sha256 "f84197a2cb4a86f17833664cc0fbdf0899486612725923ca4b8043377eff2fa0"
 
       def install
         bin.install "freq"
@@ -27,17 +27,17 @@ class Freq < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/jftuga/freq/releases/download/v1.8.2/freq_1.8.2_linux_amd64.tar.xz"
-      sha256 "ddd21d402b28fc9213efcde5d861cb45ca87f0c74858e21922e4bedc66dab5f2"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jftuga/freq/releases/download/v1.8.2/freq_1.8.2_linux_arm64.tar.xz"
+      sha256 "5b33e73d01daa04e6625bcd68800d60de1852c57300f626fa2488b4709a7b161"
 
       def install
         bin.install "freq"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jftuga/freq/releases/download/v1.8.2/freq_1.8.2_linux_arm64.tar.xz"
-      sha256 "5a5b20b7320cc3587f7619ac50f4a6c08e3380a004b43b431eef86f6e9b492fe"
+    if Hardware::CPU.intel?
+      url "https://github.com/jftuga/freq/releases/download/v1.8.2/freq_1.8.2_linux_amd64.tar.xz"
+      sha256 "2773ba24f1093d88504a3e29f448a90b3236c4240a98dc2e725a648f6f5818cf"
 
       def install
         bin.install "freq"
