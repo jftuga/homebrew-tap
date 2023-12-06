@@ -6,6 +6,8 @@ BUILD_README.js
 Automatically generate a README.md file for this repo which includes
 hyperlinks to source repositories and their descriptions
 
+Usage: node BUILD_README.js
+
 Acknowledgements: ChatGPT :-)
 */
 
@@ -129,7 +131,7 @@ function main() {
             console.log(allMarkdownEntries);
             console.log("\n");
             console.log("Creating markdown file:", OUTPUT_FILE, "\n")
-            console.log(`git commit ${OUTPUT_FILE} -m "generated on: ${getCurrentDateTime()}; git push"\n`);
+            console.log(`git commit ${OUTPUT_FILE} -m "generated on: ${getCurrentDateTime()}"; git push\n`);
             return allMarkdownEntries;
         })
         .catch(err => {
