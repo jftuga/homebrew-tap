@@ -129,7 +129,7 @@ function main() {
             console.log(allMarkdownEntries);
             console.log("\n");
             console.log("Creating markdown file:", OUTPUT_FILE, "\n")
-            console.log(`git commit ${OUTPUT_FILE} -m "generated on: ${getCurrentDateTime()}"\n`);
+            console.log(`git commit ${OUTPUT_FILE} -m "generated on: ${getCurrentDateTime()}; git push"\n`);
             return allMarkdownEntries;
         })
         .catch(err => {
