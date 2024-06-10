@@ -5,16 +5,46 @@
 class Dtdiff < Formula
   desc "Golang package and command line tool to return or output the difference between two dates and/or times or between a datetime and a duration"
   homepage "https://github.com/jftuga/dtdiff"
-  version "1.1.3"
-  depends_on :linux
+  version "1.1.4"
 
-  on_arm do
-    if Hardware::CPU.is_64_bit?
-      url "https://github.com/jftuga/dtdiff/releases/download/v1.1.3/dtdiff_1.1.3_linux_arm64.tar.xz"
-      sha256 "ea7147a5dc96c615a90e3c8b4712eb18a63f598d6af32c0e74b1e107169b18b8"
+  on_macos do
+    on_intel do
+      url "https://github.com/jftuga/dtdiff/releases/download/v1.1.4/dtdiff_1.1.4_darwin_amd64.tar.xz"
+      sha256 "9fea767ecf50d9b10dab3511705ad52ddfad55ae9aac12ba2e8cbf72a27df5f8"
 
       def install
         bin.install "dtdiff"
+      end
+    end
+    on_arm do
+      url "https://github.com/jftuga/dtdiff/releases/download/v1.1.4/dtdiff_1.1.4_darwin_arm64.tar.xz"
+      sha256 "5322b419c838e80622a2f72c7ebb593bcd25c00122ba94a054c02201dcb3aa00"
+
+      def install
+        bin.install "dtdiff"
+      end
+    end
+  end
+
+  on_linux do
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/jftuga/dtdiff/releases/download/v1.1.4/dtdiff_1.1.4_linux_amd64.tar.xz"
+        sha256 "36de92a0fe6381a35bd7c55f8967d1903008ac18ddd9da962fcdce4e639e9315"
+
+        def install
+          bin.install "dtdiff"
+        end
+      end
+    end
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/jftuga/dtdiff/releases/download/v1.1.4/dtdiff_1.1.4_linux_arm64.tar.xz"
+        sha256 "9792c65d01c0024476bbff6b70cf3485d3b2d3f8c0f67ee36f83c5bdaf302d9f"
+
+        def install
+          bin.install "dtdiff"
+        end
       end
     end
   end
