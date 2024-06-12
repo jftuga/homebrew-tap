@@ -5,20 +5,20 @@
 class Dtdiff < Formula
   desc "dtdiff: output the difference between date, time or duration"
   homepage "https://github.com/jftuga/dtdiff"
-  version "1.0.1"
+  version "1.0.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/jftuga/dtdiff/releases/download/v1.0.1/dtdiff_1.0.1_darwin_amd64.tar.xz"
-      sha256 "3350373fd177eba4019bd9128951d4363a723030b61268041bdff0ff285627a4"
+      url "https://github.com/jftuga/dtdiff/releases/download/v1.0.0/dtdiff_1.0.0_darwin_amd64.tar.xz"
+      sha256 "911fb95b999d2423d5e4b971dd86e0c60a93c1cfc6da62422ed284259ec92475"
 
       def install
         bin.install "dtdiff"
       end
     end
     on_arm do
-      url "https://github.com/jftuga/dtdiff/releases/download/v1.0.1/dtdiff_1.0.1_darwin_arm64.tar.xz"
-      sha256 "60db8dc06cf47d2504af5cf257f2be3413aae4fef53c03396e54796462798f7f"
+      url "https://github.com/jftuga/dtdiff/releases/download/v1.0.0/dtdiff_1.0.0_darwin_arm64.tar.xz"
+      sha256 "d602a1db51ea81386f392932938d6471312db32e8c79e13045da2bc5940e003b"
 
       def install
         bin.install "dtdiff"
@@ -29,8 +29,8 @@ class Dtdiff < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jftuga/dtdiff/releases/download/v1.0.1/dtdiff_1.0.1_linux_amd64.tar.xz"
-        sha256 "a915c6aa9c23b070ea4312a0a3e02802370ea67e960e4b3127d5f8cbba4683b1"
+        url "https://github.com/jftuga/dtdiff/releases/download/v1.0.0/dtdiff_1.0.0_linux_amd64.tar.xz"
+        sha256 "222f0a6334f6953bf3deff6d5b6b16b8cdbfbb0aec522d77290325b12fc2e539"
 
         def install
           bin.install "dtdiff"
@@ -39,8 +39,8 @@ class Dtdiff < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jftuga/dtdiff/releases/download/v1.0.1/dtdiff_1.0.1_linux_arm64.tar.xz"
-        sha256 "b3c57c0abd0c439cbff51cf9c3f7b31211b78760e4eac5ed164b9b42e20bce53"
+        url "https://github.com/jftuga/dtdiff/releases/download/v1.0.0/dtdiff_1.0.0_linux_arm64.tar.xz"
+        sha256 "f8c59908e25fc0deec9e97e684daeb17521aca2adf79abf6868d679321a0a1cf"
 
         def install
           bin.install "dtdiff"
