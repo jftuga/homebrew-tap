@@ -18,7 +18,7 @@ const MARKDOWN_HEADER = `
 Homebrew tap for jftuga command-line tools
 
 ## Install:
-* \`brew update; brew install jftuga/tap/XYZ\`  <-- where \`XYZ\` is a package name such as: awswho, ipinfo, etc.
+* \`brew tap jftuga/homebrew-tap; brew update; brew install jftuga/tap/XYZ\`  <-- where \`XYZ\` is a package name such as: awswho, ipinfo, etc.
 
 ## Programs
 `
