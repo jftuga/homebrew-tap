@@ -11,9 +11,9 @@ Homebrew tap for jftuga command-line tools
 * [awswho](https://github.com/jftuga/awswho) - Quickly output AWS sts get-caller-identity
 * [changecase](https://github.com/jftuga/changecase) - convert command line arguments to upper, lower or title case
 * [chars](https://github.com/jftuga/chars) - Determine the end-of-line format, tabs, bom, and nul characters
-* [dtdiff](https://github.com/jftuga/dtdiff) - Output the difference between date, time or duration
+* [dtmate](https://github.com/jftuga/DateTimeMate) - dtmate: output the difference between date, time or duration
 * [freq](https://github.com/jftuga/freq) - Display the frequency of each line in a file or from STDIN
-* [fstat](https://github.com/jftuga/fstat) - Get info for a list of files across multiple directories
+* [fstat](https://github.com/jftuga/fstat) - fstat: get info for a list of files across multiple directories
 * [gostat](https://github.com/jftuga/gostat) - Display and set file timestamps
 * [ipinfo](https://github.com/jftuga/ipinfo) - Return IP address info including geographic location and distance when given IP address, email address, host name or URL 
 * [nics](https://github.com/jftuga/nics) - Display information about Network Interface Cards (NICs)
