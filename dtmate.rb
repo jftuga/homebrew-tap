@@ -5,20 +5,20 @@
 class Dtmate < Formula
   desc "dtmate: output the difference between date, time or duration"
   homepage "https://github.com/jftuga/DateTimeMate"
-  version "1.2.0"
+  version "1.2.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/jftuga/DateTimeMate/releases/download/v1.2.0/DateTimeMate_1.2.0_darwin_amd64.tar.xz"
-      sha256 "96f60fee8010aaa011c357468db7c5c029920deee228689b21615d0eca3d4e1c"
+      url "https://github.com/jftuga/DateTimeMate/releases/download/v1.2.1/DateTimeMate_1.2.1_darwin_amd64.tar.xz"
+      sha256 "d7990a4938f61d83dbc4d8a4b103dd7d2f64004cfaffbfadc609563db4ec04fd"
 
       def install
         bin.install "dtmate"
       end
     end
     on_arm do
-      url "https://github.com/jftuga/DateTimeMate/releases/download/v1.2.0/DateTimeMate_1.2.0_darwin_arm64.tar.xz"
-      sha256 "c462c1e503a93d95afd0ea5a69c948f683b5aa32ad4e543c2e0af91adc9ce521"
+      url "https://github.com/jftuga/DateTimeMate/releases/download/v1.2.1/DateTimeMate_1.2.1_darwin_arm64.tar.xz"
+      sha256 "e07e1f5ed310a2f2948c8076c3f15fe8140f55c30a9e8bc0920214035100ecb7"
 
       def install
         bin.install "dtmate"
@@ -29,8 +29,8 @@ class Dtmate < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jftuga/DateTimeMate/releases/download/v1.2.0/DateTimeMate_1.2.0_linux_amd64.tar.xz"
-        sha256 "25e5961fd43e2e73f5f3204639f934897d39d5f92db8b1a24384c185521c064f"
+        url "https://github.com/jftuga/DateTimeMate/releases/download/v1.2.1/DateTimeMate_1.2.1_linux_amd64.tar.xz"
+        sha256 "619e3d82681b2aa82327e1917e148d0b0f4b015f611b7d33130f7520fb1f61e6"
 
         def install
           bin.install "dtmate"
@@ -39,8 +39,8 @@ class Dtmate < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jftuga/DateTimeMate/releases/download/v1.2.0/DateTimeMate_1.2.0_linux_arm64.tar.xz"
-        sha256 "6ae45724908512902a52d71fc7a3e96546ecd43cafad3d6e13b015082994bfdd"
+        url "https://github.com/jftuga/DateTimeMate/releases/download/v1.2.1/DateTimeMate_1.2.1_linux_arm64.tar.xz"
+        sha256 "abf6da444e42cb947aa9644317e55dae82d5710b724f012efad96a7d4919e694"
 
         def install
           bin.install "dtmate"
