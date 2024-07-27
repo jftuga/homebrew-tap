@@ -19,3 +19,4 @@ Homebrew tap for jftuga command-line tools
 * [nics](https://github.com/jftuga/nics) - Display information about Network Interface Cards (NICs)
 * [snspublish](https://github.com/jftuga/sns_publish) - command line tool to send message or file to AWS SNS topic subscribers
 * [spotprice](https://github.com/jftuga/spotprice) - Quickly get AWS spot instance pricing
+* [timeit](https://github.com/jftuga/timeit) - timeit: a CLI tool used to time the duration of the given command
