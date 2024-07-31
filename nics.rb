@@ -5,20 +5,20 @@
 class Nics < Formula
   desc "nics: Display information about Network Interface Cards (NICs)"
   homepage "https://github.com/jftuga/nics"
-  version "1.5.1"
+  version "1.5.2"
 
   on_macos do
     on_intel do
-      url "https://github.com/jftuga/nics/releases/download/v1.5.1/nics_1.5.1_darwin_amd64.tar.xz"
-      sha256 "446fd7df6d4cf95a3723425b154335566f465a6bffd88d5a4f9a157d557ac197"
+      url "https://github.com/jftuga/nics/releases/download/v1.5.2/nics_1.5.2_darwin_amd64.tar.xz"
+      sha256 "a4807df1e065b1b8379ef203fd0b3fdbfbd7d2bd4e1f53b91593ce33b704c443"
 
       def install
         bin.install "nics"
       end
     end
     on_arm do
-      url "https://github.com/jftuga/nics/releases/download/v1.5.1/nics_1.5.1_darwin_arm64.tar.xz"
-      sha256 "1ed664de64ae90a4e89d9b8e98dc1f60ac795c54851bb2eded5fd5a0b130a49a"
+      url "https://github.com/jftuga/nics/releases/download/v1.5.2/nics_1.5.2_darwin_arm64.tar.xz"
+      sha256 "621a7b8beee6dbcb1342e2caa0c4826386fde2fc09841791d1aebd6c74f4ae8b"
 
       def install
         bin.install "nics"
@@ -29,8 +29,8 @@ class Nics < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jftuga/nics/releases/download/v1.5.1/nics_1.5.1_linux_amd64.tar.xz"
-        sha256 "945fb94a3b76a3872a3f2cdcc5fcf262c14114e12cfd1d0ea4a785aaf366991d"
+        url "https://github.com/jftuga/nics/releases/download/v1.5.2/nics_1.5.2_linux_amd64.tar.xz"
+        sha256 "a8b130027841455cc28bb470ad6c7cb5c8ce99c51797dee28352bb5188f56d4e"
 
         def install
           bin.install "nics"
@@ -39,8 +39,8 @@ class Nics < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jftuga/nics/releases/download/v1.5.1/nics_1.5.1_linux_arm64.tar.xz"
-        sha256 "04917f5b7a4337dbe5ba328d5a1e6fd0cd84ac7c167a5ceea49cc675e889cbb2"
+        url "https://github.com/jftuga/nics/releases/download/v1.5.2/nics_1.5.2_linux_arm64.tar.xz"
+        sha256 "21138b2cb03bf65d8c9742a001c1c457faf4081265518dc3d7924fff1e6781b0"
 
         def install
           bin.install "nics"
