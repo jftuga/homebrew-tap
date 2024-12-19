@@ -5,20 +5,20 @@
 class Nics < Formula
   desc "nics: Display information about Network Interface Cards (NICs)"
   homepage "https://github.com/jftuga/nics"
-  version "1.5.2"
+  version "1.5.3"
 
   on_macos do
-    on_intel do
-      url "https://github.com/jftuga/nics/releases/download/v1.5.2/nics_1.5.2_darwin_amd64.tar.xz"
-      sha256 "a4807df1e065b1b8379ef203fd0b3fdbfbd7d2bd4e1f53b91593ce33b704c443"
+    if Hardware::CPU.intel?
+      url "https://github.com/jftuga/nics/releases/download/v1.5.3/nics_1.5.3_darwin_amd64.tar.xz"
+      sha256 "fae13cf20eaa19af694a4d28d7f503958c94714783c7e6e0e4fe78ee0154eb40"
 
       def install
         bin.install "nics"
       end
     end
-    on_arm do
-      url "https://github.com/jftuga/nics/releases/download/v1.5.2/nics_1.5.2_darwin_arm64.tar.xz"
-      sha256 "621a7b8beee6dbcb1342e2caa0c4826386fde2fc09841791d1aebd6c74f4ae8b"
+    if Hardware::CPU.arm?
+      url "https://github.com/jftuga/nics/releases/download/v1.5.3/nics_1.5.3_darwin_arm64.tar.xz"
+      sha256 "134d53859f0c546db8ec5d6ce84916f8d2429179290c1eed465b28898fce5e93"
 
       def install
         bin.install "nics"
@@ -27,20 +27,20 @@ class Nics < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jftuga/nics/releases/download/v1.5.2/nics_1.5.2_linux_amd64.tar.xz"
-        sha256 "a8b130027841455cc28bb470ad6c7cb5c8ce99c51797dee28352bb5188f56d4e"
+        url "https://github.com/jftuga/nics/releases/download/v1.5.3/nics_1.5.3_linux_amd64.tar.xz"
+        sha256 "67e34c1870ec812309acf6441a67c78b5ee4eec868f1c85f9f1c85f3294c2971"
 
         def install
           bin.install "nics"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jftuga/nics/releases/download/v1.5.2/nics_1.5.2_linux_arm64.tar.xz"
-        sha256 "21138b2cb03bf65d8c9742a001c1c457faf4081265518dc3d7924fff1e6781b0"
+        url "https://github.com/jftuga/nics/releases/download/v1.5.3/nics_1.5.3_linux_arm64.tar.xz"
+        sha256 "36cd80d193eb422fbd64f0e234e4611a845245a38259d480c5693af418cf6e76"
 
         def install
           bin.install "nics"
