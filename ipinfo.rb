@@ -5,20 +5,20 @@
 class Ipinfo < Formula
   desc "Return IP address info including geographic location and distance when given IP address, email address, host name or URL "
   homepage "https://github.com/jftuga/ipinfo"
-  version "1.2.0"
+  version "1.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jftuga/ipinfo/releases/download/v1.2.0/ipinfo_1.2.0_darwin_amd64.tar.xz"
-      sha256 "04757e4cc7ff35401651b1612bde42981dd54bd05dc3d99311483b9536baf6f6"
+      url "https://github.com/jftuga/ipinfo/releases/download/v1.3.0/ipinfo_1.3.0_darwin_amd64.tar.xz"
+      sha256 "b541f972ba56fb9e6843b835e01d42724ef039e90e00deab79c8cc3e15c60d85"
 
       def install
         bin.install "ipinfo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jftuga/ipinfo/releases/download/v1.2.0/ipinfo_1.2.0_darwin_arm64.tar.xz"
-      sha256 "31c94ac3a669d3e61f70224d67c40402abbd5b4f777d516f10e727941aa95b67"
+      url "https://github.com/jftuga/ipinfo/releases/download/v1.3.0/ipinfo_1.3.0_darwin_arm64.tar.xz"
+      sha256 "054e60a7da9d3dfee3221a8c06e792863776b32fba953e639c9e1ab9ef443ea9"
 
       def install
         bin.install "ipinfo"
@@ -29,8 +29,8 @@ class Ipinfo < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jftuga/ipinfo/releases/download/v1.2.0/ipinfo_1.2.0_linux_amd64.tar.xz"
-        sha256 "907730819f0644dfcfcf8af08aea81edccbb7d06719f0baa621f0390e3e482fe"
+        url "https://github.com/jftuga/ipinfo/releases/download/v1.3.0/ipinfo_1.3.0_linux_amd64.tar.xz"
+        sha256 "ddbefaea79e9c7ba80ef28419b3cdc4c0092d7c8e5f638604d8f2334eaae6b53"
 
         def install
           bin.install "ipinfo"
@@ -39,8 +39,8 @@ class Ipinfo < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jftuga/ipinfo/releases/download/v1.2.0/ipinfo_1.2.0_linux_arm64.tar.xz"
-        sha256 "264bce797244a845bf4c96b75167eb8e7d7db0f879f00988e7c3ee90728c3daa"
+        url "https://github.com/jftuga/ipinfo/releases/download/v1.3.0/ipinfo_1.3.0_linux_arm64.tar.xz"
+        sha256 "123d0262a1e3eb93f4a1f61417fb37d98f8f20216b751503f6c19e935feae395"
 
         def install
           bin.install "ipinfo"
