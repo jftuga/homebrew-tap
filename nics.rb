@@ -5,20 +5,20 @@
 class Nics < Formula
   desc "nics: Display information about Network Interface Cards (NICs)"
   homepage "https://github.com/jftuga/nics"
-  version "1.6.1"
+  version "1.6.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jftuga/nics/releases/download/v1.6.1/nics_1.6.1_darwin_amd64.tar.xz"
-      sha256 "eedcba48922e2720126bde1b04779660f6f1b0c03057922b28023baf6622a988"
+      url "https://github.com/jftuga/nics/releases/download/v1.6.2/nics_1.6.2_darwin_amd64.tar.xz"
+      sha256 "ea867da502908735816806071bc20e77a47afcd67a03324a4b93c90d60a25581"
 
       def install
         bin.install "nics"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jftuga/nics/releases/download/v1.6.1/nics_1.6.1_darwin_arm64.tar.xz"
-      sha256 "160a6a96264d8206bad927a048ce87736f340689bc56f065a043e5bfb0001f63"
+      url "https://github.com/jftuga/nics/releases/download/v1.6.2/nics_1.6.2_darwin_arm64.tar.xz"
+      sha256 "af32226f3c5f541c797a185cd31b8fcdf4c1800f4f085f7782732b32f3c0b37f"
 
       def install
         bin.install "nics"
@@ -29,8 +29,8 @@ class Nics < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jftuga/nics/releases/download/v1.6.1/nics_1.6.1_linux_amd64.tar.xz"
-        sha256 "ca5e6af6be703f864af365133c5c1a6a15928becf0c02d713bad456776d259c6"
+        url "https://github.com/jftuga/nics/releases/download/v1.6.2/nics_1.6.2_linux_amd64.tar.xz"
+        sha256 "b84fe780a5be7b33e9be5827cf6a6f98cf76c3fc690278f8a9082f859906495b"
 
         def install
           bin.install "nics"
@@ -39,8 +39,8 @@ class Nics < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jftuga/nics/releases/download/v1.6.1/nics_1.6.1_linux_arm64.tar.xz"
-        sha256 "127357f8a4e959acfb34100841730ec01b6a73ed1d9a6758f0c532e8ca7d6371"
+        url "https://github.com/jftuga/nics/releases/download/v1.6.2/nics_1.6.2_linux_arm64.tar.xz"
+        sha256 "bb9ad4315244584c722a95594ff65f08fc9b539cc1a1f7ad765135912e379289"
 
         def install
           bin.install "nics"
