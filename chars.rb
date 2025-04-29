@@ -5,20 +5,20 @@
 class Chars < Formula
   desc "Determine the end-of-line format, tabs, bom, and nul characters"
   homepage "https://github.com/jftuga/chars"
-  version "2.4.1"
+  version "2.5.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jftuga/chars/releases/download/v2.4.1/chars_2.4.1_darwin_amd64.tar.xz"
-      sha256 "193418eb06a27cd41f08d159af7a58a65a66c59a0221ac491d3b74d5762ee811"
+      url "https://github.com/jftuga/chars/releases/download/v2.5.0/chars_2.5.0_darwin_amd64.tar.xz"
+      sha256 "05fa799b57460269b8072aa6dd6603917dd4bc2dad615b2024f371b5357920ed"
 
       def install
         bin.install "chars"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jftuga/chars/releases/download/v2.4.1/chars_2.4.1_darwin_arm64.tar.xz"
-      sha256 "0b3cadeaa3e813fda6afcaf7d806e358ee2bad18e54cb1816e2560a2d18b0a58"
+      url "https://github.com/jftuga/chars/releases/download/v2.5.0/chars_2.5.0_darwin_arm64.tar.xz"
+      sha256 "3f329c0467c1f5c7eddf7b894d2c2b3183fcc4c8b4a1f5df9bcb765a7cf40e8b"
 
       def install
         bin.install "chars"
@@ -28,19 +28,23 @@ class Chars < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/jftuga/chars/releases/download/v2.4.1/chars_2.4.1_linux_amd64.tar.xz"
-      sha256 "15edd28900132f680208d5d4ac086428f3a79aba03e687472f4a2bd4c0c05272"
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/jftuga/chars/releases/download/v2.5.0/chars_2.5.0_linux_amd64.tar.xz"
+        sha256 "d01920ec012964ab08e9dde96845b98c5d7f9f747a3e9eb5ae44624502a84b0d"
 
-      def install
-        bin.install "chars"
+        def install
+          bin.install "chars"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jftuga/chars/releases/download/v2.4.1/chars_2.4.1_linux_arm64.tar.xz"
-      sha256 "b0c6c4068c93059e343309d52b97b45256d48ab133c60d4a12c202815dd6d2dc"
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/jftuga/chars/releases/download/v2.5.0/chars_2.5.0_linux_arm64.tar.xz"
+        sha256 "8124d7427c82aa44a5908c424deae0d2a15d5fa5bf62ad8f8380e062b83d602a"
 
-      def install
-        bin.install "chars"
+        def install
+          bin.install "chars"
+        end
       end
     end
   end
