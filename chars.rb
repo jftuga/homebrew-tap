@@ -5,20 +5,20 @@
 class Chars < Formula
   desc "Determine the end-of-line format, tabs, bom, and nul characters"
   homepage "https://github.com/jftuga/chars"
-  version "2.5.0"
+  version "2.6.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jftuga/chars/releases/download/v2.5.0/chars_2.5.0_darwin_amd64.tar.xz"
-      sha256 "05fa799b57460269b8072aa6dd6603917dd4bc2dad615b2024f371b5357920ed"
+      url "https://github.com/jftuga/chars/releases/download/v2.6.0/chars_2.6.0_darwin_amd64.tar.xz"
+      sha256 "dbb1a8e6b0e88066c91687121d51cd3854b69eed06d6aff45aea48d052aec927"
 
       def install
         bin.install "chars"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jftuga/chars/releases/download/v2.5.0/chars_2.5.0_darwin_arm64.tar.xz"
-      sha256 "3f329c0467c1f5c7eddf7b894d2c2b3183fcc4c8b4a1f5df9bcb765a7cf40e8b"
+      url "https://github.com/jftuga/chars/releases/download/v2.6.0/chars_2.6.0_darwin_arm64.tar.xz"
+      sha256 "9f3dc0dc1e8d76a74b26a6d0db4e8dabc0001ab3d6577606840cef9cd56c0b51"
 
       def install
         bin.install "chars"
@@ -29,8 +29,8 @@ class Chars < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jftuga/chars/releases/download/v2.5.0/chars_2.5.0_linux_amd64.tar.xz"
-        sha256 "d01920ec012964ab08e9dde96845b98c5d7f9f747a3e9eb5ae44624502a84b0d"
+        url "https://github.com/jftuga/chars/releases/download/v2.6.0/chars_2.6.0_linux_amd64.tar.xz"
+        sha256 "7eb16f07f217b4ea7683cb31fb00d0a79a2680247319614bb21e815a9a05dfa8"
 
         def install
           bin.install "chars"
@@ -39,8 +39,8 @@ class Chars < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jftuga/chars/releases/download/v2.5.0/chars_2.5.0_linux_arm64.tar.xz"
-        sha256 "8124d7427c82aa44a5908c424deae0d2a15d5fa5bf62ad8f8380e062b83d602a"
+        url "https://github.com/jftuga/chars/releases/download/v2.6.0/chars_2.6.0_linux_arm64.tar.xz"
+        sha256 "6f17590818c7a37761807a328a57004738073cdfdf57726d4aff5122fb7c23b1"
 
         def install
           bin.install "chars"
