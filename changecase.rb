@@ -5,54 +5,56 @@
 class Changecase < Formula
   desc "convert command line arguments to upper, lower or title case"
   homepage "https://github.com/jftuga/changecase"
-  version "1.2.0"
+  version "1.3.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/jftuga/changecase/releases/download/v1.2.0/changecase_1.2.0_darwin_arm64.tar.xz"
-      sha256 "11e3fabef839cd67c49477e7c023ade06d5f6bb4c957c15198600857fb023e4e"
+    if Hardware::CPU.intel?
+      url "https://github.com/jftuga/changecase/releases/download/v1.3.0/changecase_1.3.0_darwin_amd64.tar.xz"
+      sha256 "18afffb9e52f7708f007b354aa266011cae004a99b8bdef6bb4ef7108b8a001b"
 
       def install
         bin.install "lower"
         bin.install "upper"
         bin.install "titlecase"
         bin.install "len"
+        bin.install "eq"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/jftuga/changecase/releases/download/v1.2.0/changecase_1.2.0_darwin_amd64.tar.xz"
-      sha256 "02d3c4f7e67d333bd8316aa0ae2c2fb5a7124a8d7d98e5909fcd60b15e4388f4"
+    if Hardware::CPU.arm?
+      url "https://github.com/jftuga/changecase/releases/download/v1.3.0/changecase_1.3.0_darwin_arm64.tar.xz"
+      sha256 "8fde191c569725e170ef5210f8e24e60848bc6cc83c14e8a8d96bf12ac27e38d"
 
       def install
         bin.install "lower"
         bin.install "upper"
         bin.install "titlecase"
         bin.install "len"
+        bin.install "eq"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/jftuga/changecase/releases/download/v1.2.0/changecase_1.2.0_linux_amd64.tar.xz"
-      sha256 "24dd66d29f429832a523dd8d76504643640ef66d209db042c31f8c2b17b1749c"
-
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/jftuga/changecase/releases/download/v1.3.0/changecase_1.3.0_linux_amd64.tar.xz"
+      sha256 "2e7b377937c124a7b694a5884d1884d18be93e6955ff13d4fff0a471c22dd227"
       def install
         bin.install "lower"
         bin.install "upper"
         bin.install "titlecase"
         bin.install "len"
+        bin.install "eq"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jftuga/changecase/releases/download/v1.2.0/changecase_1.2.0_linux_arm64.tar.xz"
-      sha256 "36ead8f7380712be4d5e54c9f783aa2fc7df10f35dd4ce089e96092d01f6aa9f"
-
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/jftuga/changecase/releases/download/v1.3.0/changecase_1.3.0_linux_arm64.tar.xz"
+      sha256 "44592eafb91a30d0bf998fdd40f50cc8c8b621a9ecf15e4a30600e3057b3f920"
       def install
         bin.install "lower"
         bin.install "upper"
         bin.install "titlecase"
         bin.install "len"
+        bin.install "eq"
       end
     end
   end
