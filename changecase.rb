@@ -10,7 +10,7 @@ class Changecase < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/jftuga/changecase/releases/download/v1.4.0/changecase_1.4.0_darwin_amd64.tar.xz"
-      sha256 "58e9ee83f4f622acfb38c180bf07f2ecc94c46fd32b47fa41eb00d128e92fae5"
+      sha256 "1ab14b5bd9b3c8a6ba0120fd0931d263f66ba21f9db2908d2e1edfa7b3843f52"
 
       def install
         bin.install "lower"
@@ -18,11 +18,12 @@ class Changecase < Formula
         bin.install "titlecase"
         bin.install "len"
         bin.install "eq"
+        bin.install "chomp"
       end
     end
     if Hardware::CPU.arm?
       url "https://github.com/jftuga/changecase/releases/download/v1.4.0/changecase_1.4.0_darwin_arm64.tar.xz"
-      sha256 "276c800c71a0350ae4346fbeaae71bf6f020cbeabace5313fe5b4e8918eebecd"
+      sha256 "9fcf000cbf8ab143abee88836e052159f40cecad4921ff8c6e6332481be606ee"
 
       def install
         bin.install "lower"
@@ -30,6 +31,7 @@ class Changecase < Formula
         bin.install "titlecase"
         bin.install "len"
         bin.install "eq"
+        bin.install "chomp"
       end
     end
   end
@@ -37,24 +39,26 @@ class Changecase < Formula
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
       url "https://github.com/jftuga/changecase/releases/download/v1.4.0/changecase_1.4.0_linux_amd64.tar.xz"
-      sha256 "78bef4ba266d9287fcc552e10559f874eb2924862422b8ade1984eb8891b67c8"
+      sha256 "04ff3fa5db1317225092caecfa131db30562da4d4474c1fb51eb9f95f56530cf"
       def install
         bin.install "lower"
         bin.install "upper"
         bin.install "titlecase"
         bin.install "len"
         bin.install "eq"
+        bin.install "chomp"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
       url "https://github.com/jftuga/changecase/releases/download/v1.4.0/changecase_1.4.0_linux_arm64.tar.xz"
-      sha256 "aa3dc19608112bdef67dae7459692948d097c71b3d809edb9411d6cfdb22ad9b"
+      sha256 "c2ee30dc4232ef7097c8a3629d15d1d7e4d103b085026460383f3ea83debbc54"
       def install
         bin.install "lower"
         bin.install "upper"
         bin.install "titlecase"
         bin.install "len"
         bin.install "eq"
+        bin.install "chomp"
       end
     end
   end
