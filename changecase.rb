@@ -5,12 +5,12 @@
 class Changecase < Formula
   desc "convert command line arguments to upper, lower or title case"
   homepage "https://github.com/jftuga/changecase"
-  version "1.3.0"
+  version "1.4.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jftuga/changecase/releases/download/v1.3.0/changecase_1.3.0_darwin_amd64.tar.xz"
-      sha256 "18afffb9e52f7708f007b354aa266011cae004a99b8bdef6bb4ef7108b8a001b"
+      url "https://github.com/jftuga/changecase/releases/download/v1.4.0/changecase_1.4.0_darwin_amd64.tar.xz"
+      sha256 "58e9ee83f4f622acfb38c180bf07f2ecc94c46fd32b47fa41eb00d128e92fae5"
 
       def install
         bin.install "lower"
@@ -21,8 +21,8 @@ class Changecase < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jftuga/changecase/releases/download/v1.3.0/changecase_1.3.0_darwin_arm64.tar.xz"
-      sha256 "8fde191c569725e170ef5210f8e24e60848bc6cc83c14e8a8d96bf12ac27e38d"
+      url "https://github.com/jftuga/changecase/releases/download/v1.4.0/changecase_1.4.0_darwin_arm64.tar.xz"
+      sha256 "276c800c71a0350ae4346fbeaae71bf6f020cbeabace5313fe5b4e8918eebecd"
 
       def install
         bin.install "lower"
@@ -36,8 +36,8 @@ class Changecase < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jftuga/changecase/releases/download/v1.3.0/changecase_1.3.0_linux_amd64.tar.xz"
-      sha256 "2e7b377937c124a7b694a5884d1884d18be93e6955ff13d4fff0a471c22dd227"
+      url "https://github.com/jftuga/changecase/releases/download/v1.4.0/changecase_1.4.0_linux_amd64.tar.xz"
+      sha256 "78bef4ba266d9287fcc552e10559f874eb2924862422b8ade1984eb8891b67c8"
       def install
         bin.install "lower"
         bin.install "upper"
@@ -47,8 +47,8 @@ class Changecase < Formula
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jftuga/changecase/releases/download/v1.3.0/changecase_1.3.0_linux_arm64.tar.xz"
-      sha256 "44592eafb91a30d0bf998fdd40f50cc8c8b621a9ecf15e4a30600e3057b3f920"
+      url "https://github.com/jftuga/changecase/releases/download/v1.4.0/changecase_1.4.0_linux_arm64.tar.xz"
+      sha256 "aa3dc19608112bdef67dae7459692948d097c71b3d809edb9411d6cfdb22ad9b"
       def install
         bin.install "lower"
         bin.install "upper"
