@@ -5,20 +5,20 @@
 class Gostat < Formula
   desc "Display and set file timestamps"
   homepage "https://github.com/jftuga/gostat"
-  version "1.0.2"
+  version "1.0.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jftuga/gostat/releases/download/v1.0.2/gostat_1.0.2_darwin_amd64.tar.xz"
-      sha256 "c1449a62266af6442fb863f9bc2647d13436ffd93dfa539649e67d54861e5a6f"
+      url "https://github.com/jftuga/gostat/releases/download/v1.0.3/gostat_1.0.3_darwin_amd64.tar.xz"
+      sha256 "4e58bc921d012256178096f440966314d1278e4b698a6668ea6e4e2ba8bb5bf2"
 
       def install
         bin.install "gostat"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jftuga/gostat/releases/download/v1.0.2/gostat_1.0.2_darwin_arm64.tar.xz"
-      sha256 "6d69d1c09d9362b14c7a56d551cd85c5ffb50b36d0c13c219f6eb97b7013f342"
+      url "https://github.com/jftuga/gostat/releases/download/v1.0.3/gostat_1.0.3_darwin_arm64.tar.xz"
+      sha256 "0780d856226956ea25876d13aab080ba3380413e967368e56d818367d800c053"
 
       def install
         bin.install "gostat"
@@ -27,18 +27,16 @@ class Gostat < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/jftuga/gostat/releases/download/v1.0.2/gostat_1.0.2_linux_amd64.tar.xz"
-      sha256 "5793a028fae708f5a7aa751eba16b75f11199f5a60a77724b8f66492b9e45e55"
-
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jftuga/gostat/releases/download/v1.0.3/gostat_1.0.3_linux_amd64.tar.xz"
+      sha256 "5ea0f35a9fd3608c71347c8de9bb80bf2d81bb38362bd4fe50dcfaad316a9364"
       def install
         bin.install "gostat"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jftuga/gostat/releases/download/v1.0.2/gostat_1.0.2_linux_arm64.tar.xz"
-      sha256 "73e93cf2b67b0da3b93186eec165e7eb5089de638d842bd8d27bfb1331e91e7d"
-
+      url "https://github.com/jftuga/gostat/releases/download/v1.0.3/gostat_1.0.3_linux_arm64.tar.xz"
+      sha256 "77dfa325476d43f9c0c2d651d4ed70caa4f19e372e3ddc24a17876c71db24e22"
       def install
         bin.install "gostat"
       end
