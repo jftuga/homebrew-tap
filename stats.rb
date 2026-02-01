@@ -5,20 +5,20 @@
 class Stats < Formula
   desc "CLI for computing statistics"
   homepage "https://github.com/jftuga/go-stats-calculator"
-  version "1.4.0"
+  version "1.5.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jftuga/go-stats-calculator/releases/download/v1.4.0/go-stats-calculator_1.4.0_darwin_amd64.tar.xz"
-      sha256 "a47d3f9d69f71b7bc1a581acee4c107877894c15acf96040a26b43caf638ce38"
+      url "https://github.com/jftuga/go-stats-calculator/releases/download/v1.5.0/go-stats-calculator_1.5.0_darwin_amd64.tar.xz"
+      sha256 "f17d09c8f1f41c85edc17dccbb20a68b6ccdba2beab0f0125d694f84ce04d56b"
 
       def install
         bin.install "stats"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jftuga/go-stats-calculator/releases/download/v1.4.0/go-stats-calculator_1.4.0_darwin_arm64.tar.xz"
-      sha256 "f76c02cebce51909fad1832a0951f27f0e53b97e8c7442ddba8796ebae8f3b0e"
+      url "https://github.com/jftuga/go-stats-calculator/releases/download/v1.5.0/go-stats-calculator_1.5.0_darwin_arm64.tar.xz"
+      sha256 "843b0660de0e49f43810bf78f39f3f12ae316e64a9d2d72b67997539e74ae581"
 
       def install
         bin.install "stats"
@@ -28,15 +28,15 @@ class Stats < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jftuga/go-stats-calculator/releases/download/v1.4.0/go-stats-calculator_1.4.0_linux_amd64.tar.xz"
-      sha256 "c5f77f7a78f90916c13e0e358090db35a17c17943ff1a507dda8d9ee6197157e"
+      url "https://github.com/jftuga/go-stats-calculator/releases/download/v1.5.0/go-stats-calculator_1.5.0_linux_amd64.tar.xz"
+      sha256 "fdac265151abdffe72c9829d51b784ea4d05f1fb66f6bf0eb5daca5e76bf2b51"
       def install
         bin.install "stats"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jftuga/go-stats-calculator/releases/download/v1.4.0/go-stats-calculator_1.4.0_linux_arm64.tar.xz"
-      sha256 "8ff15117ce4f26b5394d3050f41d435cbd5c332bf2b6af4dcb0e5343099c4651"
+      url "https://github.com/jftuga/go-stats-calculator/releases/download/v1.5.0/go-stats-calculator_1.5.0_linux_arm64.tar.xz"
+      sha256 "7668bfe069421758cdd235e3ece4749adfb3c2bf36055243e7ea08139d0622f7"
       def install
         bin.install "stats"
       end
