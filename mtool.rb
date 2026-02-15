@@ -5,20 +5,20 @@
 class Mtool < Formula
   desc "Swiss army knife CLI utility"
   homepage "https://github.com/jftuga/mtool"
-  version "1.0.0"
+  version "1.1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jftuga/mtool/releases/download/v1.0.0/mtool_1.0.0_darwin_amd64.tar.xz"
-      sha256 "d2d52e8938444804bb3fb2eeafe3da174fd436a9b9f01ca70cba1c164338228c"
+      url "https://github.com/jftuga/mtool/releases/download/v1.1.0/mtool_1.1.0_darwin_amd64.tar.xz"
+      sha256 "f69d28dfa407d9295db9f1a329152efc6d1cd3a32f9b399a6438ed784fdcbc8a"
 
       def install
         bin.install "mtool"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jftuga/mtool/releases/download/v1.0.0/mtool_1.0.0_darwin_arm64.tar.xz"
-      sha256 "23f83ef4cb7fe2ee4d875f49b36a77f8db5a826c7453570cb162f930471668de"
+      url "https://github.com/jftuga/mtool/releases/download/v1.1.0/mtool_1.1.0_darwin_arm64.tar.xz"
+      sha256 "a74817c96d4280ba8ff456b0beee27a8cda9f2c69aaf8817ff3b2a09c959ab8c"
 
       def install
         bin.install "mtool"
@@ -28,15 +28,15 @@ class Mtool < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jftuga/mtool/releases/download/v1.0.0/mtool_1.0.0_linux_amd64.tar.xz"
-      sha256 "011a4edf2e7025b45dab86c689e1f316f082ddcb10b6980033b696e56668170d"
+      url "https://github.com/jftuga/mtool/releases/download/v1.1.0/mtool_1.1.0_linux_amd64.tar.xz"
+      sha256 "86a7de2e489d0ab67a0c84be8a83816dd3f5437d32a460fe863492e286ce70ca"
       def install
         bin.install "mtool"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jftuga/mtool/releases/download/v1.0.0/mtool_1.0.0_linux_arm64.tar.xz"
-      sha256 "bc29fc9f21f1a3267a09b3b582c7ba211e042a956cdfeb2d126de81e284e7070"
+      url "https://github.com/jftuga/mtool/releases/download/v1.1.0/mtool_1.1.0_linux_arm64.tar.xz"
+      sha256 "0c6a563ff05a3c217029f70c59a2fbdfddbcac65db88697de8814ae1c291a979"
       def install
         bin.install "mtool"
       end
