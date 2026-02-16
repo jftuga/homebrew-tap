@@ -5,20 +5,20 @@
 class Mtool < Formula
   desc "Swiss army knife CLI utility"
   homepage "https://github.com/jftuga/mtool"
-  version "1.2.0"
+  version "1.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jftuga/mtool/releases/download/v1.2.0/mtool_1.2.0_darwin_amd64.tar.xz"
-      sha256 "39663c0c38f6f4144804554786a1c3befeb90ac86cce9bda2bacfb391c3f7842"
+      url "https://github.com/jftuga/mtool/releases/download/v1.3.0/mtool_1.3.0_darwin_amd64.tar.xz"
+      sha256 "ef81fd960a063feace0ac23598cf6781c888ea3751efb3f4b8e7306222270373"
 
       def install
         bin.install "mtool"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jftuga/mtool/releases/download/v1.2.0/mtool_1.2.0_darwin_arm64.tar.xz"
-      sha256 "43d641a64f79d6ed3675d9059d972505e9b54ed1dfb517540752f91534ebbbef"
+      url "https://github.com/jftuga/mtool/releases/download/v1.3.0/mtool_1.3.0_darwin_arm64.tar.xz"
+      sha256 "c0a2ca708fff4edbfffabf81a7cdf6b235122332e4d2442dc2799ab42c9efd86"
 
       def install
         bin.install "mtool"
@@ -28,15 +28,15 @@ class Mtool < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jftuga/mtool/releases/download/v1.2.0/mtool_1.2.0_linux_amd64.tar.xz"
-      sha256 "482660e9c55801c6d9b90f6075aa8a4fa38f476b85af766b2bb8bc1d0483834d"
+      url "https://github.com/jftuga/mtool/releases/download/v1.3.0/mtool_1.3.0_linux_amd64.tar.xz"
+      sha256 "c9457ed623a0118297b62880ed251ab15b50131041baba1fcb2b5ad54be7b66d"
       def install
         bin.install "mtool"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jftuga/mtool/releases/download/v1.2.0/mtool_1.2.0_linux_arm64.tar.xz"
-      sha256 "2f0ae0f709924507581ad3029b785ea4e418d5628cec12bb21f3efaa45020687"
+      url "https://github.com/jftuga/mtool/releases/download/v1.3.0/mtool_1.3.0_linux_arm64.tar.xz"
+      sha256 "e1610103947b9c85b500bce0f27a01a784651e65d908dbd572643f0da5efae3d"
       def install
         bin.install "mtool"
       end
