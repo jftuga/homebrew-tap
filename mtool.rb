@@ -5,20 +5,20 @@
 class Mtool < Formula
   desc "Swiss army knife CLI utility"
   homepage "https://github.com/jftuga/mtool"
-  version "2.0.4"
+  version "2.0.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jftuga/mtool/releases/download/v2.0.4/mtool_2.0.4_darwin_amd64.tar.xz"
-      sha256 "72906126c0eb01b35dda584347aa3f09deb85801380bf28213942ccc9089554b"
+      url "https://github.com/jftuga/mtool/releases/download/v2.0.5/mtool_2.0.5_darwin_amd64.tar.xz"
+      sha256 "198bc86ac1ecdad1ba566b1b01feab269bdc2fa2d78cf077823806cdae79198a"
 
       define_method(:install) do
         bin.install "mtool"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jftuga/mtool/releases/download/v2.0.4/mtool_2.0.4_darwin_arm64.tar.xz"
-      sha256 "6a06ef8971195e9b1e00edb317ef7d040947c7615b5d5d90ccd06b4905cecb0f"
+      url "https://github.com/jftuga/mtool/releases/download/v2.0.5/mtool_2.0.5_darwin_arm64.tar.xz"
+      sha256 "b6622f7295c043393157e9f3f9b786338e157e2a00505d76ab0abbbe0166b45b"
 
       define_method(:install) do
         bin.install "mtool"
@@ -28,15 +28,15 @@ class Mtool < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jftuga/mtool/releases/download/v2.0.4/mtool_2.0.4_linux_amd64.tar.xz"
-      sha256 "8698105e8585d0fb1ac8c49744b75a37c87b443bd2f635e8ea79fb7eae9e1f5a"
+      url "https://github.com/jftuga/mtool/releases/download/v2.0.5/mtool_2.0.5_linux_amd64.tar.xz"
+      sha256 "a0e2d2bee61b6ea11f0e2a466bcbae8359a1c124cd542d4333c971bc1cc258bb"
       define_method(:install) do
         bin.install "mtool"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jftuga/mtool/releases/download/v2.0.4/mtool_2.0.4_linux_arm64.tar.xz"
-      sha256 "5f4383305afc1b2b86f157119643b9a4d537c00e4da52deaabc43c45c54ce1f7"
+      url "https://github.com/jftuga/mtool/releases/download/v2.0.5/mtool_2.0.5_linux_arm64.tar.xz"
+      sha256 "63373cada0ac5beb846a8376463b5064626392a80ff47a3740f106944eb399e3"
       define_method(:install) do
         bin.install "mtool"
       end
