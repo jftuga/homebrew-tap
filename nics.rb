@@ -5,46 +5,40 @@
 class Nics < Formula
   desc "nics: Display information about Network Interface Cards (NICs)"
   homepage "https://github.com/jftuga/nics"
-  version "1.6.2"
+  version "1.7.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jftuga/nics/releases/download/v1.6.2/nics_1.6.2_darwin_amd64.tar.xz"
-      sha256 "ea867da502908735816806071bc20e77a47afcd67a03324a4b93c90d60a25581"
+      url "https://github.com/jftuga/nics/releases/download/v1.7.0/nics_1.7.0_darwin_amd64.tar.xz"
+      sha256 "71ded5c4c9c71e79b0278216fa8c495a15599273e76a3417809b795edd8f75f6"
 
-      def install
+      define_method(:install) do
         bin.install "nics"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jftuga/nics/releases/download/v1.6.2/nics_1.6.2_darwin_arm64.tar.xz"
-      sha256 "af32226f3c5f541c797a185cd31b8fcdf4c1800f4f085f7782732b32f3c0b37f"
+      url "https://github.com/jftuga/nics/releases/download/v1.7.0/nics_1.7.0_darwin_arm64.tar.xz"
+      sha256 "9457e9b690fa4221a301ce7cd05538b5fbb4625bb5273712509f9353bf6a99e5"
 
-      def install
+      define_method(:install) do
         bin.install "nics"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/jftuga/nics/releases/download/v1.6.2/nics_1.6.2_linux_amd64.tar.xz"
-        sha256 "b84fe780a5be7b33e9be5827cf6a6f98cf76c3fc690278f8a9082f859906495b"
-
-        def install
-          bin.install "nics"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jftuga/nics/releases/download/v1.7.0/nics_1.7.0_linux_amd64.tar.xz"
+      sha256 "b8dfd63edc355cde0e9707c20ff7503782b71219fba16cc5a477ca716a94cbe7"
+      define_method(:install) do
+        bin.install "nics"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/jftuga/nics/releases/download/v1.6.2/nics_1.6.2_linux_arm64.tar.xz"
-        sha256 "bb9ad4315244584c722a95594ff65f08fc9b539cc1a1f7ad765135912e379289"
-
-        def install
-          bin.install "nics"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jftuga/nics/releases/download/v1.7.0/nics_1.7.0_linux_arm64.tar.xz"
+      sha256 "95a33646fc8f950ecbacfa4ff169fb8534cd0d8ce53c7a456e1c4852188c258a"
+      define_method(:install) do
+        bin.install "nics"
       end
     end
   end
