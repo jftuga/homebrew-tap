@@ -4,12 +4,12 @@
 class Swiftswiss < Formula
   desc "Swiss army knife CLI tool written in Swift using only native Apple frameworks"
   homepage "https://github.com/jftuga/swiftswiss"
-  version "0.3.0"
+  version "0.4.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jftuga/swiftswiss/releases/download/v0.3.0/swiftswiss_v0.3.0.tar.xz"
-      sha256 "8e1d35503a072d66fb81c2de55549f62afd024f7d54b6c646bd772536ff7f596"
+      url "https://github.com/jftuga/swiftswiss/releases/download/v0.4.0/swiftswiss_v0.4.0.tar.xz"
+      sha256 "3831884dfab54a29c040a0ce0500255d855f047e33db9edd824a6b23c89e53c3"
 
       define_method(:install) do
         bin.install "swiftswiss"
