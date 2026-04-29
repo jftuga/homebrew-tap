@@ -4,12 +4,12 @@
 class MacScreenSearch < Formula
   desc "macOS CLI tool to capture screenshots, perform OCR, and highlight or redact matched text"
   homepage "https://github.com/jftuga/mac-screen-search"
-  version "1.2.0"
+  version "1.3.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jftuga/mac-screen-search/releases/download/v1.2.0/mac-screen-search_v1.2.0.tar.xz"
-      sha256 "41edaf291ebbbe679ccbfc0dba66d0c592dc6d628a4f47391c475883854dfa76"
+      url "https://github.com/jftuga/mac-screen-search/releases/download/v1.3.0/mac-screen-search_v1.3.0.tar.xz"
+      sha256 "d1cc96e6fdc3aec97e4245305d103b154355763a1d989ef250f755d3fd08b801"
 
       define_method(:install) do
         bin.install "mac-screen-search"
