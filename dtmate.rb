@@ -5,20 +5,20 @@
 class Dtmate < Formula
   desc "dtmate: output the difference between date, time or duration"
   homepage "https://github.com/jftuga/DateTimeMate"
-  version "1.6.0"
+  version "1.7.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jftuga/DateTimeMate/releases/download/v1.6.0/DateTimeMate_1.6.0_darwin_amd64.tar.xz"
-      sha256 "0793a6e27699fb3ee2d9bb4cdea34162c03855c29582ff40b401bd3b977c48c2"
+      url "https://github.com/jftuga/DateTimeMate/releases/download/v1.7.0/DateTimeMate_1.7.0_darwin_amd64.tar.xz"
+      sha256 "b88b7eb3c87b36d4d219c9d285c8d33969062bcfa3fc9fb7229412fd2d9adf0c"
 
       define_method(:install) do
         bin.install "dtmate"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jftuga/DateTimeMate/releases/download/v1.6.0/DateTimeMate_1.6.0_darwin_arm64.tar.xz"
-      sha256 "5310b50dfe04119cda21b73442e756c9466441f84ef69e33367118f4c80cec30"
+      url "https://github.com/jftuga/DateTimeMate/releases/download/v1.7.0/DateTimeMate_1.7.0_darwin_arm64.tar.xz"
+      sha256 "200d6095dd3f85582fd53d34a6a1aa4f83c20e9b7440342f00c81455d28f1da1"
 
       define_method(:install) do
         bin.install "dtmate"
@@ -28,15 +28,15 @@ class Dtmate < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jftuga/DateTimeMate/releases/download/v1.6.0/DateTimeMate_1.6.0_linux_amd64.tar.xz"
-      sha256 "ec7e948b9101d7ad0d78db093ab91a8129eaba7d9304b4eed84c00c327585f90"
+      url "https://github.com/jftuga/DateTimeMate/releases/download/v1.7.0/DateTimeMate_1.7.0_linux_amd64.tar.xz"
+      sha256 "717977fc0ae9089dc767ac5aeb60498e8a7c7c19790fe94bead8c962e78f6ca4"
       define_method(:install) do
         bin.install "dtmate"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jftuga/DateTimeMate/releases/download/v1.6.0/DateTimeMate_1.6.0_linux_arm64.tar.xz"
-      sha256 "8a004e494a31183949316e92310773a73fda9559b0ba73f608764c464108fd0b"
+      url "https://github.com/jftuga/DateTimeMate/releases/download/v1.7.0/DateTimeMate_1.7.0_linux_arm64.tar.xz"
+      sha256 "6d92db5a4d0313c1bab381970dc5e3c77139bbbc893dc390e7c8293278caa660"
       define_method(:install) do
         bin.install "dtmate"
       end
