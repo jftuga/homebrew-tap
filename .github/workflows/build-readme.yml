@@ -1,0 +1,53 @@
+# Regenerates README.md whenever a formula, cask, or the generator itself changes on main.
+# Formula/cask pushes come from other repos (GoReleaser and release scripts using a PAT),
+# which trigger this workflow. The README commit made here uses GITHUB_TOKEN, which by
+# design does not trigger further workflow runs, and README.md is outside the path filter.
+name: Build README
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*.rb"
+      - "Casks/**.rb"
+      - "BUILD_README.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-readme
+  cancel-in-progress: false
+
+jobs:
+  build-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+        with:
+          # Full history is required: "last updated" comes from git log per file.
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.14"
+
+      - name: Generate README.md
+        run: python BUILD_README.py --write
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "README.md unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Regenerate README.md"
+          # Another release may have pushed while this job ran.
+          git pull --rebase origin main
+          git push origin HEAD:main
